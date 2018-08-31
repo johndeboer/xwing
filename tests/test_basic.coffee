@@ -29,7 +29,7 @@ casper.test.begin "Basic functionality", (test) ->
         test.assertSelectorHasText "#rebel-builder #{common.selectorForUpgradeIndex 1, 1} .select2-choice", 'No Torpedo Upgrade'
         test.assertSelectorHasText "#rebel-builder #{common.selectorForUpgradeIndex 1, 2} .select2-choice", 'No Astromech Upgrade'
         test.assertSelectorHasText "#rebel-builder #{common.selectorForUpgradeIndex 1, 3} .select2-choice", 'No Modification Upgrade'
-		test.assertSelectorHasText "#rebel-builder #{common.selectorForUpgradeIndex 1, 4} .select2-choice", 'No Configuration Upgrade'
+        test.assertSelectorHasText "#rebel-builder #{common.selectorForUpgradeIndex 1, 4} .select2-choice", 'No Configuration Upgrade'
         test.assertDoesntExist "#rebel-builder #{common.selectorForUpgradeIndex 1, 5}"
 
     .run ->
