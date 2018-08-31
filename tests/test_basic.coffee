@@ -53,9 +53,9 @@ casper.test.begin "Add/remove torpedo upgrade", (test) ->
     common.waitForStartup('#rebel-builder')
 
     common.addShip('#rebel-builder', 'X-Wing', 'Blue Squadron Escort')
-    common.addUpgrade('#rebel-builder', 1, 1, 'Proton Torpedoes')
-    common.assertShipHasPoints(test, '#rebel-builder', 1, 50)
-    common.assertTotalPoints(test, '#rebel-builder', 50)
+    common.addUpgrade('#rebel-builder', 1, 1, 'Ion Torpedoes')
+    common.assertShipHasPoints(test, '#rebel-builder', 1, 47)
+    common.assertTotalPoints(test, '#rebel-builder', 47)
 
     common.removeUpgrade('#rebel-builder', 1, 1)
     common.assertShipHasPoints(test, '#rebel-builder', 1, 41)
@@ -104,11 +104,11 @@ casper.test.begin "Multiple upgrades", (test) ->
     common.waitForStartup('#rebel-builder')
 
     common.addShip('#rebel-builder', 'X-Wing', 'Blue Squadron Escort')
-    common.addUpgrade('#rebel-builder', 1, 1, 'Proton Torpedoes')
+    common.addUpgrade('#rebel-builder', 1, 1, 'Ion Torpedoes')
     common.addUpgrade('#rebel-builder', 1, 2, 'R5-D8')
     common.addUpgrade('#rebel-builder', 1, 3, 'Afterburners')
-    common.assertShipHasPoints(test, '#rebel-builder', 1, 65)
-    common.assertTotalPoints(test, '#rebel-builder', 65)
+    common.assertShipHasPoints(test, '#rebel-builder', 1, 62)
+    common.assertTotalPoints(test, '#rebel-builder', 62)
 
     .run ->
         test.done()
